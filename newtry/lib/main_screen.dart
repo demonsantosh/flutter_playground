@@ -6,7 +6,7 @@ import 'package:newtry/third_page.dart';
 import 'web_view_page.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -26,21 +26,21 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Second',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Third',
+            icon: Icon(Icons.diamond),
+            label: 'Promotions',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
+            label: 'My Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.phone),
             label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.red,
+        selectedItemColor: Colors.red,
+        unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
       ),
